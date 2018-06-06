@@ -1,0 +1,79 @@
+/*main CSS*/
+
+body{
+  margin-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-right: 0;
+  display: inline-block;
+}
+
+div{
+  display: inline-block;
+}
+
+/* landing page*/
+.landingDIV{
+  z-index: 1000;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  transition: 2s opacity;
+  opacity: 1;
+}
+
+.landingDIV > .innerlandingDIV{
+  top: 40%;
+  left: 50%;
+  z-index: 1001;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+}
+
+.innerlandingDIV > p{
+  color:white;
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 200%;
+  opacity: 0;
+  transition: 1s opacity;
+
+}
+#landingline1{
+  font-size: 300%;
+  text-decoration: underline;
+  //margin-top: 45vh;
+}
+#landingline2{
+    font-style: italic;
+}
+
+
+
+
+
+
+/*MOBILE CSS*/
+
+@media screen and (max-width: 1024px){
+	body{
+		margin-left: 0;
+		margin-right: 0;
+	}
+
+  #landingline1{
+    font-size: 150%;
+    //margin-top: 45vh;
+  }
+  #landingline2{
+    font-size: 100%;
+  }
+
+
+
+
+
+
+}
