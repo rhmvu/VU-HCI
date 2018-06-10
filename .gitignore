@@ -13,3 +13,6 @@ bin/
 *.iml
 *.iws
 *.ipr
+
+#MAC STUFF
+.DS_Store
