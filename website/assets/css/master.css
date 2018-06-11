@@ -11,13 +11,20 @@ body{
 
 /* landing page*/
 .landingDIV{
-  z-index: 1000;
+  z-index: 1000999;
   position: fixed;
   width: 100vw;
   height: 100vh;
   background-color: black;
+  background-color: #067778;
   transition: 2s opacity;
   opacity: 1;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+}
+.landingDIV > img{
+  height:  100vh;
 }
 
 .landingDIV > .innerlandingDIV{
