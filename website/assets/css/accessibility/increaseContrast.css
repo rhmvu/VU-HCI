@@ -1,0 +1,9 @@
+body,div,p,h2,h1,h3,h4,h5,div,span,section,ul,li,footer,a,.button.fit.special,header,i{
+  color: black !important;
+  background-color: white !important;
+  background-image: none !important;
+}
+
+#contrastSwitch{
+  text-decoration: underline;
+}
