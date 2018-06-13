@@ -7,14 +7,29 @@ var checked ="fa fa-check-square pull-right";
 var fontSwitch = document.getElementById('fontSwitch');
 var contrastSwitch = document.getElementById('contrastSwitch');
 
+var fontSwitchMobile = document.getElementById('fontSwitchMobile');
+var contrastSwitchMobile = document.getElementById('contrastSwitchMobile');
+
+
+$(document).ready(function() {
+  fontSwitchMobile = document.getElementById('fontSwitchMobile');
+  contrastSwitchMobile = document.getElementById('contrastSwitchMobile');
+});
+
+
+
+
+
 if(getStoredValue('increaseFont') !== null && getStoredValue('increaseFont')=== '1'){
   fontSwitchOn();
+  fontSwitchOnMobile();
 }
 
 
 
 if(getStoredValue('increaseContrast') !== null && getStoredValue('increaseContrast')=== '1'){
   contrastSwitchOn();
+  fontSwitchOffMobile();
 }
 
 
@@ -36,9 +51,7 @@ function getStoredValue(key) {
     }
 }
 
-$(document).ready(function() {
 
-});
 
 
 
@@ -73,6 +86,64 @@ $(document).ready(function() {
       location.reload();//Quick fix for the check box
       },false)
 });
+
+
+
+/*add mobile click handlers*/
+$(document).ready(function() {
+    fontSwitchMobile.addEventListener("click",function () {
+      console.log("CLICKED FONT");
+      if ($("#fontSwitchIconMobile").attr("class")!==checked) {
+        storeValue("increaseFont",1);
+        fontSwitchOnMobile();
+        console.log("Put fontSwitchOn");
+      }else{
+        storeValue("increaseFont",0);
+        fontSwitchOffMobile();
+        console.log("Put fontSwitchOFF");
+      }
+    },false)
+
+});
+
+$(document).ready(function() {
+      contrastSwitchMobile.addEventListener("click",function () {
+      if ($("#contrastSwitchIconMobile").attr("class")!==checked) {
+        storeValue("increaseContrast",1);
+        contrastSwitchOnMobile();
+      }else{
+        storeValue("increaseContrast",0);
+        contrastSwitchOffMobile();
+      }
+
+      },false)
+});
+
+
+
+
+function contrastSwitchOnMobile(){
+  $("#additionalCSS2").attr("href","/assets/css/accessibility/increaseContrast.css");
+  $("#contrastSwitchIconMobile").attr("class",checked);
+}
+
+function contrastSwitchOffMobile() {
+  $("#additionalCSS2").attr("href","");
+  $("#contrastSwitchIconMobile").attr("class",unchecked);
+}
+
+function fontSwitchOnMobile() {
+  $("#additionalCSS").attr("href","/assets/css/accessibility/increaseFont.css");
+  $("#fontSwitchIconMobile").prop("class",checked);
+}
+
+function fontSwitchOffMobile() {
+  $("#additionalCSS").attr("href","");
+  $("#fontSwitchIconMobile").prop("class",unchecked);
+
+}
+
+
 
 
 /*functions*/

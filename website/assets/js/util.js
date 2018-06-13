@@ -17,6 +17,15 @@
 				href = $this.attr('href'),
 				target = $this.attr('target');
 
+			if ($this.attr("id")=== "fontSwitch" || $this.attr("id")=== "contrastSwitch") {
+				if ($this.attr("id")=== "fontSwitch") {
+					b.push("<a class=\"link depth-1\" style=\"-webkit-tap-highlight-color: rgba(0, 0, 0, 0);\" id=\"fontSwitchMobile\"><span class=\"indent-1\"></span>Increase text size<i id=\"fontSwitchIconMobile\" class=\"fa fa-square pull-right\"></i></a>"
+					);
+				}else{
+					b.push("<a class=\"link depth-1\" style=\"-webkit-tap-highlight-color: rgba(0, 0, 0, 0);\" id=\"contrastSwitchMobile\"><span class=\"indent-1\"></span>Increase contrast<i id=\"contrastSwitchIconMobile\" class=\"fa fa-square pull-right\"></i></a>"
+					);
+				}
+			}else{
 			b.push(
 				'<a ' +
 					'class="link depth-' + indent + '"' +
@@ -27,7 +36,7 @@
 					$this.text() +
 				'</a>'
 			);
-
+		}
 		});
 
 		return b.join('');
