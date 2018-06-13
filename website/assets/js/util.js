@@ -17,6 +17,7 @@
 				href = $this.attr('href'),
 				target = $this.attr('target');
 
+				/* If one of the A tags has id fontSwitch or contrastSwitch they will be different than from the generated ones, we load them manually ourselves*/
 			if ($this.attr("id")=== "fontSwitch" || $this.attr("id")=== "contrastSwitch") {
 				if ($this.attr("id")=== "fontSwitch") {
 					b.push("<a class=\"link depth-1\" style=\"-webkit-tap-highlight-color: rgba(0, 0, 0, 0);\" id=\"fontSwitchMobile\"><span class=\"indent-1\"></span>Increase text size<i id=\"fontSwitchIconMobile\" class=\"fa fa-square pull-right\"></i></a>"
