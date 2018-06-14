@@ -1,10 +1,11 @@
-body,div,p,h2,h1,h3,h4,h5,div,span,section,ul,input,.wrapper.style2 input[type="submit"].special,li,footer,a,.button.fit.special,header,nav,i{
+body,div,p,h2,h1,h3,h4,h5,div,span,section,ul,input,.wrapper.style2 input[type="submit"].special,li,footer,a,.button.fit.special,.button,header,nav,i{
   color: black !important;
   background-color: white !important;
   /*background-image: none !important;*/
   border-color: white !important;
   /*background: white !important;*/
 }
+
 
 #contrastSwitch,#contrastSwitchMobile{
   text-decoration: underline;
