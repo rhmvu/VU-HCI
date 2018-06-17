@@ -1,0 +1,15 @@
+{
+  "name": "ADAM & AOKI",
+  "short_name": "A&A",
+  "lang": "en-US",
+  "start_url": "/",
+  "display": "fullscreen",
+  "theme_color": "#272833",
+  "icons": [
+    {
+      "src": "/images/logo_square.png",
+      "sizes": "861x860",
+      "type": "image/png"
+    }
+  ]
+}
