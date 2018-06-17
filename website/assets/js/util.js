@@ -18,27 +18,34 @@
 				target = $this.attr('target');
 
 				/* If one of the A tags has id fontSwitch or contrastSwitch they will be different than from the generated ones, we load them manually ourselves*/
-			if ($this.attr("id")=== "fontSwitch" || $this.attr("id")=== "contrastSwitch") {
-				if ($this.attr("id")=== "fontSwitch") {
+				switch ($this.attr("id")) {
+					case "fontSwitch":
 					b.push("<a class=\"link depth-1\" style=\"-webkit-tap-highlight-color: rgba(0, 0, 0, 0);\" id=\"fontSwitchMobile\"><span class=\"indent-1\"></span>Increase text size<i id=\"fontSwitchIconMobileOn\" class=\"fa fa-check-square pull-right\"></i><i id=\"fontSwitchIconMobileOff\" class=\"fa fa-square pull-right\"></i></a>"
 					);
-				}else{
-					b.push("<a class=\"link depth-1\" style=\"-webkit-tap-highlight-color: rgba(0, 0, 0, 0);\" id=\"contrastSwitchMobile\"><span class=\"indent-1\"></span>Increase contrast<i id=\"contrastSwitchIconMobileOn\" class=\"fa fa-check-square pull-right\"></i><i id=\"contrastSwitchIconMobileOff\" class=\"fa fa-square pull-right\"></i></a>"
+						break;
+						case "contrastSwitch":
+						b.push("<a class=\"link depth-1\" style=\"-webkit-tap-highlight-color: rgba(0, 0, 0, 0);\" id=\"contrastSwitchMobile\"><span class=\"indent-1\"></span>Increase contrast<i id=\"contrastSwitchIconMobileOn\" class=\"fa fa-check-square pull-right\"></i><i id=\"contrastSwitchIconMobileOff\" class=\"fa fa-square pull-right\"></i></a>"
+						);
+						break;
+							case "accessibilitySwitches":
+							b.push("<a class=\"link depth-0\" href=\"#\" style=\"-webkit-tap-highlight-color: rgba(0, 0, 0, 0);\"><span class=\"indent-0\"></span><i class=\"fa fa-wheelchair\"></i></a>");
+
+							break;
+					default:
+					b.push(
+						'<a ' +
+							'class="link depth-' + indent + '"' +
+							( (typeof target !== 'undefined' && target != '') ? ' target="' + target + '"' : '') +
+							( (typeof href !== 'undefined' && href != '') ? ' href="' + href + '"' : '') +
+						'>' +
+							'<span class="indent-' + indent + '"></span>' +
+							$this.text() +
+						'</a>'
 					);
+					break;
+
 				}
-			}else{
-			b.push(
-				'<a ' +
-					'class="link depth-' + indent + '"' +
-					( (typeof target !== 'undefined' && target != '') ? ' target="' + target + '"' : '') +
-					( (typeof href !== 'undefined' && href != '') ? ' href="' + href + '"' : '') +
-				'>' +
-					'<span class="indent-' + indent + '"></span>' +
-					$this.text() +
-				'</a>'
-			);
-		}
-		});
+			});
 
 		return b.join('');
 
