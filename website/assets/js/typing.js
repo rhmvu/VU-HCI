@@ -2,7 +2,7 @@
 
 
 var i = 0;
-var txt = 'Where functionality meets Fashion'; /* The text */
+var txt = 'Where functionality meets fashion.'; /* The text */
 var typingSpeed = 80; /* The speed/duration of the effect in milliseconds */
 //var dataSentences = "Where funtionality meets fashion,Fashion meets functionality,Innovative and Healthy,Taking the responsibility for you";
 
@@ -17,7 +17,7 @@ function typeWriter() {
 
 
 var j = 0.1;
-var baseTxt = 'Clothing ';
+var baseTxt = 'Welcome to clothing ';
 var countingSpeed = 80;
 var tim;
 
@@ -28,6 +28,7 @@ function counter(){
     j = j+0.1;
 
     document.getElementById("headerH2").innerHTML = baseTxt+j.toFixed(1);
+    document.getElementById("headerH2").innerHTML += ".";
   },countingSpeed);
 }
 
