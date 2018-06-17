@@ -11,6 +11,11 @@ body{
 
 /*menu*/
 
+#contrastSwitchIconOn,#fontSwitchIconOn,#contrastSwitchIconMobileOn,#fontSwitchIconMobileOn{
+  display: none;
+}
+
+
 
 #menu > #accessibilityMenu{
   bottom: 0;

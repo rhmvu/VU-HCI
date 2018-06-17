@@ -1,12 +1,10 @@
 'use strict';
 
-
-var unchecked = "fa fa-square pull-right";
-var checked ="fa fa-check-square pull-right";
-
-
+var increasedContrast = false;
+var increasedFont = false;
 
 /* Get variables/elements*/
+
 var fontSwitch = document.getElementById('fontSwitch');
 var contrastSwitch = document.getElementById('contrastSwitch');
 
@@ -54,24 +52,24 @@ function getStoredValue(key) {
 /*click handlers for the menu*/
 $(document).ready(function() {
     fontSwitch.addEventListener("click",function () {
-      if ($("#fontSwitchIcon").attr("class")!==checked) {
+      if (!increasedFont) {
         fontSwitchOn();
       }else{
         fontSwitchOff();
       }
-      location.reload();//Quick fix for the check box
+      //location.reload();//Quick fix for the check box
     },false)
 
 });
 
 $(document).ready(function() {
       contrastSwitch.addEventListener("click",function () {
-      if ($("#contrastSwitchIcon").attr("class")!==checked) {
+      if (!increasedContrast) {
         contrastSwitchOn();
       }else{
         contrastSwitchOff();
       }
-      location.reload();//Quick fix for the check box
+    //  location.reload();//Quick fix for the check box
       },false)
 });
 
@@ -80,21 +78,23 @@ $(document).ready(function() {
 /*add mobile click handlers*/
 $(document).ready(function() {
     fontSwitchMobile.addEventListener("click",function () {
-      if ($("#fontSwitchIconMobile").attr("class")!==checked) {
+      if (!increasedFont) {
         fontSwitchOn();
       }else{
         fontSwitchOff();
       }
+    //  location.reload();//Quick fix for the check box
     },false)
 });
 
 $(document).ready(function() {
       contrastSwitchMobile.addEventListener("click",function () {
-      if ($("#contrastSwitchIconMobile").attr("class")!==checked) {
+      if (!increasedContrast) {
         contrastSwitchOn();
       }else{
         contrastSwitchOff();
       }
+    //  location.reload();//Quick fix for the check box
       },false)
 });
 
@@ -102,30 +102,47 @@ $(document).ready(function() {
 
 /*functions*/
 function contrastSwitchOn(){
+  increasedContrast = true;
+  console.log('CONTRAST ON');
   storeValue("increaseContrast",1);
   $("#additionalCSS2").attr("href","/assets/css/accessibility/increaseContrast.css");
-  $("#contrastSwitchIcon").attr("class",checked);
-  $("#contrastSwitchIconMobile").attr("class",checked);
+  /*$("#contrastSwitchIconOff").hide();
+  $("#contrastSwitchIconOn").show();
+  $("#contrastSwitchIconMobileOff").hide();
+  $("#contrastSwitchIconMobileOn").show();*/
 }
 
 function contrastSwitchOff() {
+  increasedContrast = false;
+  console.log('CONTRAST OFF');
   storeValue("increaseContrast",0);
   $("#additionalCSS2").attr("href","");
-  $("#contrastSwitchIcon").attr("class",unchecked);
-  $("#contrastSwitchIconMobile").attr("class",unchecked);
+
+/*  $("#contrastSwitchIconOff").show();
+  $("#contrastSwitchIconOn").hide();
+  $("#contrastSwitchIconMobileOff").show();
+  $("#contrastSwitchIconMobileOn").hide();*/
 }
 
 function fontSwitchOn() {
+  increasedFont = true;
+  console.log('FONT ON');
   storeValue("increaseFont",1);
   $("#additionalCSS").attr("href","/assets/css/accessibility/increaseFont.css");
-  $("#fontSwitchIcon").prop("class",checked);
-  $("#fontSwitchIconMobile").prop("class",checked);
+  /*$("#fontSwitchIconOff").hide();
+  $("#fontSwitchIconOn").show();
+  $("#fontSwitchIconMobileOff").hide();
+  $("#fontSwitchIconMobileOn").show();*/
 }
 
 function fontSwitchOff() {
+  increasedFont = false;
+  console.log('FONT OFF');
   storeValue("increaseFont",0);
   $("#additionalCSS").attr("href","");
-  $("#fontSwitchIcon").prop("class",unchecked);
-  $("#fontSwitchIconMobile").prop("class",unchecked);
+  /*$("#fontSwitchIconOff").show();
+  $("#fontSwitchIconOn").hide();
+  $("#fontSwitchIconMobileOff").show();
+  $("#fontSwitchIconMobileOn").hide();*/
 
 }

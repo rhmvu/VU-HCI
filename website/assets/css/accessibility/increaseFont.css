@@ -5,6 +5,13 @@ body{
   text-decoration: underline;
 }
 
+#fontSwitchIconOn,#fontSwitchIconMobileOn{
+  display: inline-block !important;
+}
+#fontSwitchIconOff,#fontSwitchIconMobileOff{
+  display: none !important;
+}
+
 
 @media screen and (max-width: 1024px) {
   body{

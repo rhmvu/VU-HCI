@@ -8,29 +8,34 @@
 	<head>
 		<title>Information - ADAM &amp; AOKI</title>
 		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="stylesheet" href="/assets/css/master.css">
-		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
-		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
-		<link rel="stylesheet" id="additionalCSS" href="">
-		<link rel="stylesheet" id="additionalCSS2" href="">
+
+
 
 		<link rel="manifest" href="manifest.json">
+		<meta name="mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="application-name" content="A&A">
+		<meta name="apple-mobile-web-app-title" content="A&A">
+		<meta name="theme-color" content="#272833">
+		<meta name="msapplication-navbutton-color" content="#272833">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+		<meta name="msapplication-starturl" content="/">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<meta name="mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="application-name" content="A&A">
-<meta name="apple-mobile-web-app-title" content="A&A">
-<meta name="theme-color" content="#272833">
-<meta name="msapplication-navbutton-color" content="#272833">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="msapplication-starturl" content="/">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<link rel="icon" type="image/png" sizes="861x860" href="/images/logo_square.png">
+		<link rel="apple-touch-icon" type="image/png" sizes="861x860" href="/images/logo_square.png">
 
-<link rel="icon" type="image/png" sizes="861x860" href="/images/logo_square.png">
-<link rel="apple-touch-icon" type="image/png" sizes="861x860" href="/images/logo_square.png">
+
+
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<!--scripts-->
+		<script type="text/javascript" src="/assets/js/entryPage.js"></script>
+		<link rel="stylesheet" id="additionalCSS" href="">
+		<link rel="stylesheet" id="additionalCSS2" href="">
 	</head>
 	<body>
 		<div id="page-wrapper">
@@ -48,14 +53,14 @@
 							<li>
 								<a href="#">Accessibility</a> <!-- TO BE (not working mobile now):<i class="fa fa-wheelchair"></i>-->
 								<ul>
-									<li><a class="accessibilitySwitch" href="" id="fontSwitch">Increase text size<i id="fontSwitchIcon" class="fa fa-square pull-right"></i></a></li>
-									<li><a class="accessibilitySwitch" href="" id="contrastSwitch">Increase contrast<i id="contrastSwitchIcon" class="fa fa-square pull-right"></i></a></li>
-								</ul>
-							</li>
-							<li><a href="https://shopify.com" class="button special">Shop</a></li>
-						</ul>
-					</nav>
-				</header>
+									<li><a class="accessibilitySwitch" href="" id="fontSwitch">Increase text size<i id="fontSwitchIconOff" class="fa fa-square pull-right"></i><i id="fontSwitchIconOn" class="fa fa-check-square pull-right"></i></a></li>
+									<li><a class="accessibilitySwitch" href="" id="contrastSwitch">Increase contrast<i id="contrastSwitchIconOff" class="fa fa-square pull-right"></i><i id="contrastSwitchIconOn" class="fa fa-check-square pull-right"></i></a></li>
+									</ul>
+								</li>
+								<li><a href="product.html" class="button special">Shop</a></li>
+							</ul>
+						</nav>
+					</header>
 
 			<!-- Main -->
 				<div id="main" class="wrapper style1">

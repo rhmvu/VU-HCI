@@ -10,3 +10,10 @@ body,div,p,h2,h1,h3,h4,h5,div,span,section,ul,input,.wrapper.style2 input[type="
 #contrastSwitch,#contrastSwitchMobile{
   text-decoration: underline;
 }
+
+#contrastSwitchIconOn,#contrastSwitchIconMobileOn{
+  display: inline-block !important;
+}
+#contrastSwitchIconOff,#contrastSwitchIconMobileOff{
+  display: none !important;
+}
