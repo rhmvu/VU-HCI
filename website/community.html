@@ -81,7 +81,7 @@
                       <th>Answers</th>
                     </tr>
                   </thead>
-                  <tbody>
+                  <tbody id="FAQBody">
                     <tr>
 
                       <td>How long does it take for t-shirt to change color?</td>
@@ -122,31 +122,31 @@
                       <th>Answers</th>
                     </tr>
                   </thead>
-                  <tbody>
+                  <tbody id="communityBody">
                     <tr>
 
                       <td>Does the t-shirt work differently on different continents?</td>
-                      <td>29.99</td>
+                      <td>10</td>
                     </tr>
                     <tr>
 
                       <td>Does the t-shirt work differently when wet?</td>
-                      <td>19.99</td>
+                      <td>2</td>
                     </tr>
                     <tr>
 
                       <td>What are the delivery charges?</td>
-                      <td>29.99</td>
+                      <td>6</td>
                     </tr>
                     <tr>
 
                       <td>I want to order 100 t-shirts for school students. Can I get a discount?</td>
-                      <td>19.99</td>
+                      <td>3</td>
                     </tr>
                     <tr>
 
                       <td>Should I let my children wear this t-shirt? Is it safe for skin?</td>
-                      <td>29.99</td>
+                      <td>5</td>
                     </tr>
                   </tbody>
                 </table>
@@ -160,7 +160,7 @@
               <section id="sidebar">
                 <section>
                   <h3>Ask yours!</h3>
-                  <form method="post" action="#">
+                  <form id="questionForm" name="question">
                     <div class="row uniform 50%">
                       <div class="6u 12u$(xsmall)">
                         <input type="text" name="name" id="name" value="" placeholder="Name" />
@@ -190,7 +190,7 @@
                         <label for="human">I am a human</label>
                       </div>
                       <div class="12u$">
-                        <textarea name="message" id="message" placeholder="Enter your message" rows="6"></textarea>
+                        <textarea name="message" id="message" placeholder="Enter your Question" rows="6"></textarea>
                       </div>
                       <div class="12u$">
                         <ul class="actions">
@@ -251,6 +251,6 @@
     <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
     <script src="assets/js/main.js"></script>
     <script type="text/javascript" src="/assets/js/accessibility.js"></script>
-
+    <script type="text/javascript" src="/assets/js/community.js"></script>
   </body>
   </html>
