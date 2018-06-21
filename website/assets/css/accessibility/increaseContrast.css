@@ -1,14 +1,40 @@
-body,div,p,h2,h1,h3,h4,h5,div,span,section,ul,input,.wrapper.style2 input[type="submit"].special,li,footer,a,.button.fit.special,.button,header,nav,i{
+body,div,p,h2,b,h1,h3,h4,h5,div,span,section,ul,.wrapper.style2 input[type="submit"].special,li,footer,a,.button.fit.special,.button,header,nav,i{
   color: black !important;
   background-color: white !important;
   /*background-image: none !important;*/
-  border-color: white !important;
+  border-color: lightgrey !important;
   /*background: white !important;*/
 }
 
 .button.special, .button,.button.fit.special{
   background-color: lightgrey !important;
 }
+
+
+table tbody tr {
+			border: solid 1px rgba(0, 0,0, 0.3) !important;
+			border-left: 0!important;
+			border-right: 0!important;
+		}
+
+			table tbody tr:nth-child(2n + 1) {
+				background-color: rgba(0,0,0, 0.075) !important;
+			}
+
+
+
+form > input,input,form,textarea,input,select,label,label::before,input[type="submit"].special, input[type="reset"].special, input[type="button"].special, .button.special{
+  background-color: lightgrey !important;
+  color: black !important;
+  border-color: black !important;
+
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: black !important;
+    opacity: 1; /* Firefox */
+}
+
 
 #contrastSwitch,#contrastSwitchMobile{
   text-decoration: underline;
