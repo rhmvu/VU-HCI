@@ -33,9 +33,7 @@ $("#questionForm").submit(function(event){
 
 function handleForm(event) {
   ie8SafePreventEvent(event);
-  console.log("handling FORM");
   var value = getStoredValue(key);
-  console.log(value);
   var form = document.forms["question"];
   if (form["human"].checked===false) {
     alert("You must be a Human to submit a question!");
@@ -46,9 +44,7 @@ function handleForm(event) {
   if (value === null) {
     storeValue(key,JSON.stringify([message]));
   }else{
-    console.log(JSON.parse(value));
     var newVar = JSON.parse(value).concat([message]);
-    console.log(newVar);
     storeValue(key,JSON.stringify(newVar));
   }
   form.reset();
