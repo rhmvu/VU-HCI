@@ -99,7 +99,9 @@ body{
     font-size: 100%;
   }
 
-
+.youtube.video{
+  max-width: 90vw;
+}
 
 
 
