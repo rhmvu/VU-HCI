@@ -72,7 +72,13 @@ body{
     font-style: italic;
 }
 
+.linkIcons a, .linkIcons span{
+  border-bottom: none !important;
+  cursor: pointer !important;
+  color: white;
+  font-style: italic;
 
+}
 
 
 
