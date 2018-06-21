@@ -16,10 +16,12 @@ $(document).ready(function() {
   /*for (var i = 0; i < communityData.length; i++) {
     communityContent+="<tr><td>"+communityData[i]+"</td><td>"+Math.floor((Math.random() * 10) + 1)+"</td></tr>";
   }*/
-  for (var i = 0; i < userData.length; i++) {
-    communityContent+="<tr><td>"+userData[i]+"</td><td>"+0+"</td></tr>";
+  if (userData !== null) {
+    for (var i = 0; i < userData.length; i++) {
+      communityContent+="<tr><td>"+userData[i]+"</td><td>"+0+"</td></tr>";
+    }
+    community.innerHTML= communityContent;
   }
-  community.innerHTML= communityContent;
 });
 
 
