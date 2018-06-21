@@ -23,7 +23,7 @@ table tbody tr {
 
 
 
-form > input,input,form,textarea,input,select,label,label::before,input[type="submit"].special, input[type="reset"].special, input[type="button"].special, .button.special{
+.accordion,.panel,.panel::after,.panel >p,form > input,input,form,textarea,input,select,label,label::before,input[type="submit"].special, input[type="reset"].special, input[type="button"].special, .button.special{
   background-color: lightgrey !important;
   color: black !important;
   border-color: black !important;
