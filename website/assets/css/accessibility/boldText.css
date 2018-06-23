@@ -1,0 +1,20 @@
+body{
+  font-weight: bolder;
+}
+#boldSwitch,#boldSwitchMobile{
+  text-decoration: underline;
+}
+
+#boldSwitchIconOn,#boldSwitchIconMobileOn{
+  display: inline-block !important;
+}
+#boldSwitchIconOff,#boldSwitchIconMobileOff{
+  display: none !important;
+}
+
+
+@media screen and (max-width: 1024px) {
+  body{
+    
+  }
+}

@@ -2,18 +2,22 @@
 
 var increasedContrast = false;
 var increasedFont = false;
+var boldText = false;
 
 /* Get variables/elements*/
 
 var fontSwitch = document.getElementById('fontSwitch');
+var boldSwitch = document.getElementById('boldSwitch');
 var contrastSwitch = document.getElementById('contrastSwitch');
 
 var fontSwitchMobile = null;
+var boldSwitchMobile = null;
 var contrastSwitchMobile = null;
 
 //Get elements after their generation via util.js (document must be ready)
 $(document).ready(function() {
   fontSwitchMobile = document.getElementById('fontSwitchMobile');
+  boldSwitchMobile = document.getElementById('boldSwitchMobile');
   contrastSwitchMobile = document.getElementById('contrastSwitchMobile');
 });
 
@@ -24,6 +28,10 @@ $(document).ready(function() {
 if(getStoredValue('increaseFont') !== null && getStoredValue('increaseFont')=== '1'){
   fontSwitchOn();
 }
+if(getStoredValue('boldText') !== null && getStoredValue('boldText')=== '1'){
+  boldSwitchOn();
+}
+
 
 if(getStoredValue('increaseContrast') !== null && getStoredValue('increaseContrast')=== '1'){
   contrastSwitchOn();
@@ -63,6 +71,20 @@ $(document).ready(function() {
 });
 
 $(document).ready(function() {
+    boldSwitch.addEventListener("click",function () {
+      if (!boldText) {
+        boldSwitchOn();
+      }else{
+        boldSwitchOff();
+      }
+      //location.reload();//Quick fix for the check box
+    },false)
+
+});
+
+
+
+$(document).ready(function() {
       contrastSwitch.addEventListener("click",function () {
       if (!increasedContrast) {
         contrastSwitchOn();
@@ -88,6 +110,20 @@ $(document).ready(function() {
 });
 
 $(document).ready(function() {
+    boldSwitchMobile.addEventListener("click",function () {
+      if (!boldText) {
+        boldSwitchOn();
+      }else{
+        boldSwitchOff();
+      }
+    //  location.reload();//Quick fix for the check box
+    },false)
+});
+
+
+
+
+$(document).ready(function() {
       contrastSwitchMobile.addEventListener("click",function () {
       if (!increasedContrast) {
         contrastSwitchOn();
@@ -106,10 +142,6 @@ function contrastSwitchOn(){
   console.log('CONTRAST ON');
   storeValue("increaseContrast",1);
   $("#additionalCSS2").attr("href","/assets/css/accessibility/increaseContrast.css");
-  /*$("#contrastSwitchIconOff").hide();
-  $("#contrastSwitchIconOn").show();
-  $("#contrastSwitchIconMobileOff").hide();
-  $("#contrastSwitchIconMobileOn").show();*/
 }
 
 function contrastSwitchOff() {
@@ -117,11 +149,6 @@ function contrastSwitchOff() {
   console.log('CONTRAST OFF');
   storeValue("increaseContrast",0);
   $("#additionalCSS2").attr("href","");
-
-/*  $("#contrastSwitchIconOff").show();
-  $("#contrastSwitchIconOn").hide();
-  $("#contrastSwitchIconMobileOff").show();
-  $("#contrastSwitchIconMobileOn").hide();*/
 }
 
 function fontSwitchOn() {
@@ -129,10 +156,6 @@ function fontSwitchOn() {
   console.log('FONT ON');
   storeValue("increaseFont",1);
   $("#additionalCSS").attr("href","/assets/css/accessibility/increaseFont.css");
-  /*$("#fontSwitchIconOff").hide();
-  $("#fontSwitchIconOn").show();
-  $("#fontSwitchIconMobileOff").hide();
-  $("#fontSwitchIconMobileOn").show();*/
 }
 
 function fontSwitchOff() {
@@ -140,9 +163,18 @@ function fontSwitchOff() {
   console.log('FONT OFF');
   storeValue("increaseFont",0);
   $("#additionalCSS").attr("href","");
-  /*$("#fontSwitchIconOff").show();
-  $("#fontSwitchIconOn").hide();
-  $("#fontSwitchIconMobileOff").show();
-  $("#fontSwitchIconMobileOn").hide();*/
+}
 
+function boldSwitchOn() {
+  boldText = true;
+  console.log('BOLD ON');
+  storeValue("boldText",1);
+  $("#additionalCSS3").attr("href","/assets/css/accessibility/boldText.css");
+}
+
+function boldSwitchOff() {
+  boldText = false;
+  console.log('BOLD OFF');
+  storeValue("boldText",0);
+  $("#additionalCSS3").attr("href","");
 }
