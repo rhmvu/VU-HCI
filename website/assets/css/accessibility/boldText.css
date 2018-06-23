@@ -1,5 +1,5 @@
-body{
-  font-weight: bolder;
+body,div,p,h2,b,h1,h3,h4,h5,div,span,section,ul,.wrapper.style2 input[type="submit"].special,li,footer,a,.button.fit.special,.button,header,nav,i,label,textarea{
+  font-weight: bolder!important;
 }
 #boldSwitch,#boldSwitchMobile{
   text-decoration: underline;
@@ -15,6 +15,6 @@ body{
 
 @media screen and (max-width: 1024px) {
   body{
-    
+
   }
 }
