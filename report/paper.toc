@@ -1,8 +1,0 @@
-\contentsline {section}{\numberline {1}Introduction}{1}
-\contentsline {section}{\numberline {2}Background Information}{1}
-\contentsline {subsection}{\numberline {2.1}context of A\&A}{1}
-\contentsline {section}{\numberline {3}Research Question}{1}
-\contentsline {section}{\numberline {4}Research}{1}
-\contentsline {subsection}{\numberline {4.1}Observations}{1}
-\contentsline {section}{\numberline {5}Result}{1}
-\contentsline {section}{\numberline {6}References}{1}
