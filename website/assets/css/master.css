@@ -8,14 +8,11 @@ body{
   /*display: inline-block;*/
 }
 
-
 /*menu*/
 
 #contrastSwitchIconOn,#fontSwitchIconOn,#boldSwitchIconOn,#boldSwitchIconMobileOn,#contrastSwitchIconMobileOn,#fontSwitchIconMobileOn{
   display: none;
 }
-
-
 
 #menu > #accessibilityMenu{
   bottom: 0;
@@ -26,6 +23,7 @@ body{
 .accessibilitySwitch > .fa{
   font-size: 200%;
 }
+
 
 /* landing page*/
 .landingDIV{
@@ -80,7 +78,11 @@ body{
 
 }
 
-
+/* disable default links*/
+a.image.fit{
+  pointer-events: none;
+  cursor: default;
+}
 
 
 /*MOBILE CSS*/
@@ -102,8 +104,4 @@ body{
 .youtube.video{
   max-width: 90vw;
 }
-
-
-
-
 }
