@@ -16,7 +16,6 @@ _research_ - Contains personas, scenarios and usecases in docx format.
 
 ## [LIVE DEMO]
 [LIVE DEMO]: https://hci.rubenvanderham.nl
-~~https://www.adamaoki.ml~~
 
 https://hci.rubenvanderham.nl
 
